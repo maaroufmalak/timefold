@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0c0e" />
+    <meta
+      name="description"
+      content="TIMEFOLD is an interactive science explainer that turns cosmic distance into the age of the light reaching Earth."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="TIMEFOLD" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TIMEFOLD" />
+    <meta property="og:title" content="TIMEFOLD | You have never seen the present" />
+    <meta
+      property="og:description"
+      content="Move from the Moon to the early universe and discover how far back in time every view reaches."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TIMEFOLD | You have never seen the present" />
+    <meta
+      name="twitter:description"
+      content="An interactive field guide to light travel time across the universe."
+    />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem('timefold-theme')
+          const systemTheme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+          document.documentElement.dataset.theme = savedTheme || systemTheme
+        } catch {
+          document.documentElement.dataset.theme = 'dark'
+        }
+      })()
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["WebSite", "LearningResource"],
+        "name": "TIMEFOLD",
+        "headline": "You have never seen the present",
+        "description": "An interactive science explainer about cosmic distance and light travel time.",
+        "inLanguage": "en",
+        "educationalLevel": "General audience",
+        "learningResourceType": "Interactive explainer",
+        "about": ["Speed of light", "Astronomy", "Lookback time"]
+      }
+    </script>
+    <title>TIMEFOLD | You have never seen the present</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
