@@ -217,7 +217,7 @@ function App() {
 
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="TIMEFOLD home">
-          TIMEFOLD<span aria-hidden="true">c</span>
+          TIMEFOLD<span aria-hidden="true">01</span>
         </a>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -266,10 +266,13 @@ function App() {
       <main id="main-content">
         <section className="hero" id="top" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow">Interactive science essay</p>
+            <div className="hero-kicker">
+              <p className="eyebrow">One strange rule</p>
+              <span className="hero-kicker__note" aria-hidden="true">space = time</span>
+            </div>
             <h1 id="hero-title">
               <span>You have never</span>
-              <span>seen the present.</span>
+              <span>seen the <em>present.</em></span>
             </h1>
             <p className="hero-intro">
               Every view of space is delayed. Move through the universe and watch now become history.
@@ -283,15 +286,21 @@ function App() {
             </div>
           </div>
 
-          <div
-            className="hero-art"
-            role="img"
-            aria-label="A circular cosmic lens visualizing light arriving from the Moon"
-          >
-            <div className="hero-art__ring" aria-hidden="true" />
-            <div className="hero-art__readout">
-              <span>Light arriving now</span>
-              <strong>1.28 s old</strong>
+          <div className="hero-visual">
+            <div
+              className="hero-art"
+              role="img"
+              aria-label="A cosmic lens visualizing light arriving from the Moon"
+            >
+              <div className="hero-art__ring" aria-hidden="true" />
+              <div className="hero-art__readout">
+                <span>Light arriving now</span>
+                <strong>1.28 s old</strong>
+              </div>
+            </div>
+            <div className="hero-art__caption" aria-hidden="true">
+              <span>Start here: the Moon</span>
+              <strong>Look farther. See earlier.</strong>
             </div>
           </div>
         </section>
